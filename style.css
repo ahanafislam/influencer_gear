@@ -1,0 +1,249 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Common Style */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --brand-text-color: #3A3A3A;
+    --brand-color: #E02C6D;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #18191F;
+}
+
+a{
+    font-size: 16px;
+    font-weight: 600px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--brand-text-color);
+}
+
+button{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 10px 24px;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    border-radius: 41px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: box-shadow 1s;
+}
+
+button:hover{
+    box-shadow: 3px 3px 3px #3A3A3A;
+}
+
+/* =======================
+Style For Navbar & Header 
+==========================*/
+#wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 87px;
+    margin-bottom: 50px;
+}
+
+nav h4{
+    color: var(--brand-text-color);
+    font-size: 24px;
+    line-height: 36px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li{
+    margin-right: 34px;
+    transition: transform 0.3s linear;
+}
+
+nav ul li:hover{
+    overflow: hidden;
+    transform: scale(1.1);
+}
+
+/* Style Header */
+header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.banner-contain{
+    max-width: 582px;
+    margin-right: 133px;
+}
+
+.banner-contain h1{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 16px;
+}
+
+.banner-contain p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--brand-text-color);
+}
+
+.banner-contain button{
+    position: relative;
+    animation: btn-animation 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+button i{
+    margin-left: 8px;
+    position: relative;
+    animation: arrow-animation 3s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes arrow-animation {
+    0%{
+        left: 0;
+        top: 0;
+    }
+
+    100%{
+        left: 30px;
+        top: 0;
+    }
+}
+
+@keyframes btn-animation {
+    0%{
+        top: 0;
+    }
+
+    100%{
+        top: 0;
+        box-shadow: 5px 5px 5px #3A3A3A;
+    }
+}
+
+.banner-image{
+    max-width: 475px;
+    background-image: url(images/circle_design.svg);
+    background-position: center;
+    background-size: 100%;
+}
+
+.banner-image img{
+    width: 100%;
+}
+
+
+/*======================================
+    Medis Query For Diffrent Screen
+========================================*/
+/* For Tablet View */
+@media screen and (max-width: 768px)
+and (max-device-width: 1024px) {
+    /* Tablate Screen View For  Navbar */
+    #wrapper{
+        padding: 10px;
+    }
+    nav{
+        margin-top: 10px;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Tablate Screen View For Header*/
+    header{
+        justify-content: center;
+    }
+
+    .banner-contain h1{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+        margin-top: 14px;
+    }
+
+    .banner-contain p{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    .banner-image{
+        width: 500px;
+    }
+}
+ 
+/* For Mobile View */
+@media screen and (max-width: 480px){
+    /* Mobile Screen View For  Navbar */
+    nav h4{
+        font-size: 16px;
+        margin-bottom: 22px;
+    }
+
+    nav ul{
+        justify-content: space-between;
+    }
+    nav ul li a{
+        font-size: 10px;
+    }
+
+    /* Mobile Screen View For  Header*/
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-contain{
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .banner-contain h1{
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 42px;
+        margin-top: 14px;
+    }
+
+    .banner-contain p{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    .banner-image{
+        order: -1;
+        width: 257px;
+        height: 257px;
+        margin-top: 22px;
+    }
+
+    button{
+        margin-top: 20px;
+    }
+}
