@@ -28,24 +28,6 @@ a{
     color: var(--brand-text-color);
 }
 
-button{
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    padding: 10px 24px;
-    background-color: var(--brand-color);
-    color: white;
-    border: none;
-    border-radius: 41px;
-    margin-top: 16px;
-    cursor: pointer;
-    transition: box-shadow 1s;
-}
-
-button:hover{
-    box-shadow: 3px 3px 3px #3A3A3A;
-}
-
 .container{
     margin: 0 auto;
     max-width: 1047px;
@@ -136,6 +118,17 @@ header{
 }
 
 .banner-contain button{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 10px 24px;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    border-radius: 41px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: all 1s;
     animation: btn-animation 2s linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -143,8 +136,11 @@ header{
 
 button i{
     margin-left: 8px;
+}
+
+button:hover i{
     position: relative;
-    animation: arrow-animation 3s linear;
+    animation: arrow-animation 2s linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
