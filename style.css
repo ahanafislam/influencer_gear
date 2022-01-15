@@ -51,6 +51,14 @@ button:hover{
     max-width: 1047px;
 }
 
+main > h2, .upcoming > h2{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 70px;
+    color: var(--brand-text-color);
+    text-align: center;
+}
+
 /* =======================
 Style For Navbar & Header 
 ==========================*/
@@ -105,6 +113,19 @@ header{
     font-weight: 700;
     line-height: 70px;
     margin-bottom: 16px;
+    animation: banner-animation 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes banner-animation {
+    from{
+        text-shadow: none;
+    }
+
+    to{
+        text-shadow: 3px 3px 10px #666;
+    }
 }
 
 .banner-contain p{
@@ -115,7 +136,6 @@ header{
 }
 
 .banner-contain button{
-    position: relative;
     animation: btn-animation 2s linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -161,19 +181,23 @@ button i{
 
 .banner-image img{
     width: 100%;
+    position: relative;
+    animation: img-animation 2s linear;
+}
+
+@keyframes img-animation {
+    from{
+        top: -500px;
+    }
+
+    to{
+        top: 0;
+    }
 }
 
 /*===========================
 Style For Popular Collection
 ============================= */
-main > h2{
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 70px;
-    color: var(--brand-text-color);
-    text-align: center;
-}
-
 .products{
     margin-top: 30px;
     display: grid;
@@ -254,6 +278,50 @@ main > h2{
     transform: scale(1.1);
 }
 
+/*=============================
+    Style for upcoming Product
+===============================*/
+.upcoming{
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.upcoming-products{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.upcoming-product{
+    border-radius: 5px;
+    width: 260px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.15);
+}
+
+.product-text p{
+    font-size: 13px;
+    padding: 5px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.product-text h3{
+    text-align: center;
+}
+
+.product-text p a{
+    font-size: 12px;
+    margin-left: 3px;
+    color: var(--brand-color);
+}
+
+.upcoming-product img{
+    width: 100%;
+    border-radius: 10px;
+}
 /*=======================
     Style for footer
 =========================*/
@@ -280,8 +348,7 @@ footer{
 }
 
 #footer-text p{
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
     color: #D9DBE1;
     font-family: 'Manrope', sans-serif;
 }
