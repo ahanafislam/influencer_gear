@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
 
 /* Common Style */
 *{
@@ -240,12 +241,11 @@ main > h2{
 }
 
 .see-more{
-    top: 50px;
+    margin: 50px 10px;
     float: right;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    position: relative;
     color: var(--brand-color);
     transition: transform 2s;
 }
@@ -254,15 +254,73 @@ main > h2{
     transform: scale(1.1);
 }
 
+/*=======================
+    Style for footer
+=========================*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    background-color: #0A0826;
+    height: 239px;
+}
+
+#footer-text{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer-text h3{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+#footer-text p{
+    font-size: 14px;
+    line-height: 24px;
+    color: #D9DBE1;
+    font-family: 'Manrope', sans-serif;
+}
+
+#footer-text ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+#footer-text ul li{
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+    padding: 7px 5px 3px 5px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.164);
+    transition: all 1s;
+}
+
+#footer-text ul li a{
+    color: white;
+    font-size: 25px;
+}
+
+#footer-text ul li:hover{
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
 /*======================================
     Medis Query For Diffrent Screen
 ========================================*/
 /* For Tablet View */
-@media screen and (max-width: 768px)
-and (max-device-width: 1024px) {
+@media screen and (max-width: 820px){
     /* Tablate Screen View For  Navbar */
     #wrapper{
-        padding: 10px;
+        padding: 20px;
     }
     nav{
         margin-top: 10px;
@@ -297,6 +355,9 @@ and (max-device-width: 1024px) {
 /* For Mobile View */
 @media screen and (max-width: 480px){
     /* Mobile Screen View For  Navbar */
+    #wrapper{
+        padding: 10px;
+    }
     nav h4{
         font-size: 16px;
         margin-bottom: 22px;
@@ -343,5 +404,25 @@ and (max-device-width: 1024px) {
 
     button{
         margin-top: 20px;
+    }
+
+    /* Mobile Screen View For Footer */
+    #footer-text h3{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    
+    #footer-text p{
+        font-size: 12px;
+    }
+
+    #footer-text ul li a{
+        font-size: 20px;
+    }
+
+    #footer-text ul li{
+        width: 24px;
+        height: 24px;
     }
 }
